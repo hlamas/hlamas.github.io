@@ -1,0 +1,15 @@
+{
+  "background_color": "gray",
+  "description": "Chess-clock inspired timer for multiplayer boardgames.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/m-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Multiplayer chess timer",
+  "short_name": "Multitimer",
+  "start_url": "/multitimer/index.html"
+}

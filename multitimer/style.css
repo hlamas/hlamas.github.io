@@ -1,0 +1,112 @@
+html{
+  height: 100vh;
+}
+
+div#timers{
+  font-size: 4rem;
+  width: 100%
+}
+ 
+.main-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20rem;
+  margin: auto;
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+}
+
+.nextplayer-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 20rem;
+  /* height: 4rem; */
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  /* left: 0; */
+  /* right: 0; */
+  padding: 0 0 calc(0px + env(safe-area-inset-bottom));
+  /* padding-bottom: calc(env(safe-area-inset-bottom)); */
+}
+
+button.nextplayer-button{
+  width: 100%;
+  height: 4rem;
+}
+
+button{
+  font-size: 2rem;
+  color: #284BFF;
+}
+
+select{
+  font-size: 2rem;
+}
+
+#menuBtn{
+  font-size: 1.8rem;
+  width: 100%;
+  height: 4rem;
+}
+
+.modal-controls{
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  flex-flow: column-reverse;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  padding: 0 0 calc(0px + env(safe-area-inset-bottom));
+}
+
+.modal-controls button{
+  width: 100%;
+  height: 4rem;
+}
+
+.modal-controls #selects{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.modal-controls select{
+  width: 30%;
+  height: 4rem;
+}
+
+.modal-controls div{
+  background: black;
+}
+
+#pause-message{
+  color: white;
+  font-size: 4rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.timerdisplay{
+  text-align: center;
+  width: 100%;
+  height: 4.5rem;
+}
+
+.overdue {
+  color: red;
+}
+
+.activeplayer{
+  color: #284BFF;
+}
+
+.nextplayer{
+  color: green;
+}

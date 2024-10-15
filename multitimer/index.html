@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Multichess timer</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  </head>
+  <body>
+<div class="modal-controls" id="myModal" style="display: none;">
+<button id="reset-button" onclick="newgame()">Start New Game</button>
+<div id="selects">
+    <select name="players" id="nplayers-select">
+	<option value=3 selected>3p</option>
+	<option value=4>4p</option>
+	<option value=5>5p</option>
+	<option value=6>6p</option>
+	<option value=7>7p</option>
+	<option value=8>8p</option>
+	<option value=9>9p</option>
+	<option value=10>10p</option>
+   </select>
+   <select name="time-h" id="h-select">
+   </select>
+   <select name="time-m" id="m-select">
+   </select>
+</div>
+   <div id="pause-message">Game paused.</div>
+</div>
+<div class="main-view">
+<button id="menuBtn">Pause/New Game</button>
+<div class="timers" id="timers">
+    <div class="timerdisplay" id="td0">X&nbsp&nbsp00:00:10</div>
+    <div class="timerdisplay" id="td1">Y&nbsp-00:00:10</div>
+    <div class="timerdisplay" id="td2">Z&nbsp&nbsp00:00:10</div>
+    <div id="timer-end-div"></div>
+</div>
+<div class="nextplayer-div">
+<button class="nextplayer-button" onclick="passturn()">End turn</button>
+</div> 
+</div>
+</body>
+</html>
