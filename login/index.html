@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+  <body>
+ 
+    <h2>Add Facebook Login to your webpage</h2>
+ 
+      <!-- Set the element id for the JSON response -->
+    
+      <p id="profile"></p>
+ 
+      <script>
+  
+        <!-- Add the Facebook SDK for Javascript -->
+  
+        (function(d, s, id){
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) {return;}
+                              js = d.createElement(s); js.id = id;
+                              js.src = "https://connect.facebook.net/en_US/sdk.js";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk')
+        );
+ 
+ 
+        window.fbAsyncInit = function() {  // comment 
+            // <!-- Initialize the SDK with your app and the Graph API version for your app -->
+            FB.init({
+                      appId            : '473359174910171',
+                      xfbml            : true,
+                      version          : 'v24.0'
+                    });
+            // <!-- If you are logged in, automatically get your name and email address, your public profile information -->
+            FB.login(function(response){
+                           document.getElementById("profile").innerHTML = "Good to see you, " + response.name + ". i see your email address is " + response.email
+            },
+            [
+                config_id = '4293338950985187',
+                response_type = 'code',
+                override_default_response_type = true
+            ]
+            );
+        };
+ 
+      </script>
+ 
+  </body>
+</html>
